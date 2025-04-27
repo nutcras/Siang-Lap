@@ -28,8 +28,8 @@ siang-lap/
 ├── ui.py              
 ├── crypto_utils.py    
 ├── voice_utils.py     
-├── requirements.txt    
-├── README.md
+├── requirements.txt     
+└── README.md            
 ```   
 
 
