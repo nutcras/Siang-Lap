@@ -34,5 +34,5 @@ siang-lap/
 
 
 ## Recommend 
--To maximize the security and "cringe power" of your encryption, choose a password that would make your friends feel extremely embarrassed when saying it out loud.//เพื่อความเบียวในใจฉัน โปรดใช้รหัสที่เพื่อนจะรู้สึกว่าต้องเขินมากๆเมื่อต้องเปิดมัน
--When building the app, temporarily disable your antivirus software.
+- To maximize the security and "cringe power" of your encryption, choose a password that would make your friends feel extremely embarrassed when saying it out loud.//เพื่อความเบียวในใจฉัน โปรดใช้รหัสที่เพื่อนจะรู้สึกว่าต้องเขินมากๆเมื่อต้องเปิดมัน
+- When building the app, temporarily disable your antivirus software.
