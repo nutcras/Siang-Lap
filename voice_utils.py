@@ -58,7 +58,7 @@ def speech_to_text():
             print("ไม่สามารถเข้าใจเสียง")
             return None
 
-def record_and_convert_to_text(duration=5, sample_rate=16000):
+def record_and_convert_to_text(temp_file = "temp_recording.wav", duration=5, sample_rate=16000):
     try:
         print("กำลังบันทึกเสียง...")
         recording = sd.rec(int(duration * sample_rate),
@@ -68,7 +68,7 @@ def record_and_convert_to_text(duration=5, sample_rate=16000):
         
         sd.wait()
         
-        temp_file = "temp_recording.wav"
+        
         wav.write(temp_file, sample_rate, recording)
         
         recognizer = sr.Recognizer()
@@ -76,6 +76,7 @@ def record_and_convert_to_text(duration=5, sample_rate=16000):
             recognizer.adjust_for_ambient_noise(source)
             audio_data = recognizer.record(source)
             text = recognizer.recognize_google(audio_data, language='th-TH')
+            print("ข้อความที่รับรู้:", text) 
             return text
     except Exception as e:
         print(f"ข้อผิดพลาดในการแปลงเสียง: {str(e)}")

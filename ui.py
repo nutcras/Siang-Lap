@@ -83,13 +83,15 @@ class VoiceEncryptApp(QMainWindow):
             QMessageBox.warning(self, "คำเตือน", "กรุณาเลือกไฟล์ที่เข้ารหัส (.enc)")
             return
         
-        QMessageBox.information(self, "ข้อมูล", "กรุณาพูดรหัสผ่านเป็นภาษาไทย")
-        password_text = record_and_convert_to_text()
+        QMessageBox.information(self, "ข้อมูล", "เมื่อปิดหน้าต่างนี้ กรุณาพูดรหัสผ่านเป็นภาษาไทย 5 วินาที")
+        temp_file = "temp_recording.wav"
+        password_text = record_and_convert_to_text(temp_file)
         
         if not password_text:
             QMessageBox.warning(self, "คำเตือน", "ไม่สามารถรับรู้เสียงได้ กรุณาลองอีกครั้ง")
             return
-        
+        else:
+            os.remove(temp_file)
         try:
             key = generate_key(password_text)
             
