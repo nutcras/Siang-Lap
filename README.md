@@ -29,8 +29,7 @@ siang-lap/
 ├── crypto_utils.py    
 ├── voice_utils.py     
 ├── requirements.txt    
-├── README.md           
-└── LICENSE          
+├── README.md
 ```   
 
 
